@@ -1,15 +1,3 @@
-/**
-* Template Name: TheEvent
-* Template URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
 /* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -22,7 +10,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #2f3138; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #0e1b4d; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #f82249; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #5f01d0; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -1682,9 +1670,20 @@ section,
   margin-bottom: 10px;
 }
 
+.btn{
+  background-color: var(--accent-color);
+  border: var(--accent-color);
+  color: #fff;
+}
+
+.btn:hover{
+  background-color: #5e01d0a7;
+  color: #fff;
+}
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
+/* .starter-section { */
   /* Add your styles here */
-}
+/* } */
