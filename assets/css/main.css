@@ -1600,6 +1600,9 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+.contact{
+  border-radius: 70px 70px 0 0;
+}
 .contact .info-item {
   background-color: var(--surface-color);
   padding: 20px 0 30px 0;
