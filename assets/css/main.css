@@ -220,13 +220,13 @@ h6 {
   z-index: 997;
 }
 
-.header .logo {
+/* .header .logo {
   line-height: 1;
-}
+} */
 
 .header .logo img {
   max-height: 56px;
-  margin-right: 8px;
+  /* margin-right: 8px; */
 }
 
 .header .logo h1 {
@@ -253,7 +253,7 @@ h6 {
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
   .header .logo {
     order: 1;
   }
@@ -267,7 +267,7 @@ h6 {
   .header .navmenu {
     order: 3;
   }
-}
+} */
 
 .scrolled .header {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
@@ -517,7 +517,7 @@ h6 {
     overflow: hidden;
   }
 
-  .mobile-nav-active .mobile-nav-toggle {
+  /* .mobile-nav-active .mobile-nav-toggle {
     color: #fff;
     position: absolute;
     font-size: 32px;
@@ -525,7 +525,7 @@ h6 {
     right: 15px;
     margin-right: 0;
     z-index: 9999;
-  }
+  } */
 
   .mobile-nav-active .navmenu {
     position: fixed;
@@ -537,6 +537,11 @@ h6 {
 
   .mobile-nav-active .navmenu>ul {
     display: block;
+  }
+
+  .header .logo img {
+    max-height: 36px;
+    /* margin-right: 8px; */
   }
 }
 
@@ -1025,6 +1030,8 @@ section,
   text-align: center;
   position: relative;
   overflow: hidden;
+  width: fit-content;
+  margin: auto;
 }
 
 .speakers .member .member-info {
@@ -1769,3 +1776,9 @@ section,
 /* .starter-section { */
   /* Add your styles here */
 /* } */
+
+/* evans styling styling */
+#register, #sponsor {
+  background-color: #FF00D2;
+  color: white;
+}
