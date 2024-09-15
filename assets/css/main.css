@@ -1748,6 +1748,28 @@ section,
   color: #fff;
 }
 
+
+/* Grants */
+
+.grants{
+  background-color: #F9F9F9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.grants .grant-btn {
+  background-color: var(--accent-color); /* Button color */
+  color: white;
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grants .grant-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 20px rgba(106, 13, 173, 0.7);
+}
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
