@@ -10,7 +10,8 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #2f3138; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #0e1b4d; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #5f01d0; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  /*--accent-color: #5f01d0;*/ /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: var(--footer-pink);
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
   --footer-pink: #fa6af1fd
@@ -276,7 +277,8 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: rgba(1, 8, 33, 0.82);
+  --background-color: rgba(1, 8, 33, 0.72);
+  backdrop-filter: blur(10px);
 }
 
 /*--------------------------------------------------------------
@@ -1657,6 +1659,17 @@ section,
   }
 }
 
+@media (max-width: 380px) {
+  #register, #sponsor{
+    font-size: 12px;
+  }
+}
+@media (max-width: 320px) {
+  #register, #sponsor{
+    font-size: 9px;
+  }
+}
+
 .contact .php-email-form input[type=text],
 .contact .php-email-form input[type=email],
 .contact .php-email-form textarea {
@@ -1752,7 +1765,7 @@ section,
 /* Grants */
 
 .grants{
-  background-color: #F9F9F9;
+  background-color: #f2f1f1;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
 }
@@ -1764,6 +1777,7 @@ section,
   /* border-radius: 10px; */
   text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* border: 2px solid #fff; */
 }
 
 .grants .grant-btn:hover {
@@ -1779,6 +1793,13 @@ section,
 
 /* evans styling styling */
 #register, #sponsor {
-  background-color: #FF00D2;
+  /*background-color: #FF00D2;*/
+  background-color: var(--footer-pink);
   color: white;
+  transition: .3s;
+  border: 2px solid #fff;
+}
+#register:hover, #sponsor:hover{
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px #ff00d06a;
 }
