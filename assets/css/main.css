@@ -10,8 +10,10 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #2f3138; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #0e1b4d; /* Color for headings, subheadings and title throughout the website */
-  /*--accent-color: #5f01d0;*/ /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --other-color: #5f01d0; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --accent-color: var(--footer-pink);
+  /* --accent-color: #ff00d2; */
+  /* --accent-color: #5f01d0; */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
   --footer-pink: #fa6af1fd
@@ -61,6 +63,9 @@ a {
   text-decoration: none;
   transition: 0.3s;
 }
+/* a.hero-play{
+  color: #ff00d2;
+} */
 
 a:hover {
   color: color-mix(in srgb, var(--accent-color), transparent 25%);
@@ -79,6 +84,19 @@ h6 {
 
 /* Pulsating Play Button
 ------------------------------*/
+.pulsating-play-btn.hero-play{
+  background: radial-gradient(#ff00d2 50%, color-mix(in srgb, var(--accent-color), transparent 75%) 52%);
+}
+.pulsating-play-btn.hero-play::before{
+  border: 5px solid color-mix(in srgb, #ff00d2, transparent 30%);
+}
+.pulsating-play-btn:hover:after {
+  border-left: 15px solid #ff00d2;
+}
+a.hero-play:hover{
+  background-color: #ff00d2;
+}
+
 .pulsating-play-btn {
   width: 94px;
   height: 94px;
@@ -666,7 +684,7 @@ h6 {
 
 .footer .community{
   text-decoration: none;
-  background-color: var(--footer-pink);
+  background-color: var(--accent-color);
   color: var(--contrast-color);
   padding: 10px 20px;
   border: 2px solid #fff;
@@ -678,7 +696,7 @@ h6 {
   perspective: 500px;
 }
 .footer .community:hover{
-  box-shadow: 6px 9px 0 var(--footer-pink);
+  box-shadow: 6px 9px 0 var(--accent-color);
   transform: translate3d(-10px, -10px, 20px);
 }
 
@@ -744,19 +762,20 @@ h6 {
   position: fixed;
   visibility: hidden;
   opacity: 0;
-  right: 15px;
-  bottom: 15px;
+  right: 25px;
+  bottom: 25px;
   z-index: 99999;
-  background-color: var(--accent-color);
-  width: 44px;
-  height: 44px;
+  background-color: #fff;
+  box-shadow: 2px 4px 10px #ff00d04b;
+  width: 45px;
+  height: 45px;
   border-radius: 50px;
   transition: all 0.4s;
 }
 
 .scroll-top i {
-  font-size: 24px;
-  color: var(--contrast-color);
+  font-size: 34px;
+  color: var(--accent-color);
   line-height: 0;
 }
 
@@ -764,12 +783,16 @@ h6 {
   background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
   color: var(--contrast-color);
 }
+.scroll-top:hover i{
+  color: var(--contrast-color);
+}
 
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
-  bottom: 15px;
+  bottom: 25px;
 }
+
 
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
@@ -1032,8 +1055,13 @@ section,
   text-align: center;
   position: relative;
   overflow: hidden;
-  width: fit-content;
+  /* width: fit-content; */
   margin: auto;
+  /* height: 250px; */
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.35);
+}
+.speakers .member img{
+  width: 100%;
 }
 
 .speakers .member .member-info {
@@ -1043,12 +1071,28 @@ section,
   background: rgba(0, 0, 0, 0.6);
   transition: 0.4s;
 }
+.speakers .member .member-info.orode {
+  inset: auto 0 -60px 0;
+}
+.speakers .member .member-info.chukwurah {
+  inset: auto 0 -44px 0;
+}
+.speakers .member .member-info.enyi {
+  inset: auto 0 -44px 0;
+}
 
 .speakers .member .member-info-content h4 {
   color: var(--contrast-color);
   font-weight: 700;
-  margin-bottom: 4px;
+  margin-bottom: 15px;
   font-size: 16px;
+  font-family: var(--heading-font);
+}
+.speakers .member .member-info-content p {
+  color: var(--contrast-color);
+  font-weight: 500;
+  margin-bottom: 4px;
+  font-size: 14px;
 }
 
 .speakers .member .member-info-content h4 a {
@@ -1090,6 +1134,84 @@ section,
   bottom: 0;
 }
 
+@media (min-width: 992px){
+  .aima{
+    margin-top: -183px;
+  }
+  .faith{
+    margin-top: -45px;
+  }
+  .adaora{
+    margin-top: -305px;
+  }
+  .jerry{
+    margin-top: -230px;
+  }
+  .orode-div{
+    margin-top: -1px;
+  }
+  /* .chukwurah-div{
+    margin-top: -30px;
+  } */
+  .speakers .member .member-info.chukwurah {
+    inset: auto 0 -62px 0;
+  }
+  .speakers .member:hover .member-info.chukwurah {
+    bottom: 0;
+  }
+  .speakers .member .member-info.enyi {
+    inset: auto 0 -62px 0;
+  }
+  .speakers .member:hover .member-info.enyi {
+    bottom: 0;
+  }
+}
+@media (min-width: 1200px){
+  .aima{
+    margin-top: -230px;
+  }
+  .faith{
+    margin-top: -60px;
+  }
+  .adaora{
+    margin-top: -365px;
+  }
+  .jerry{
+    margin-top: -280px;
+  }
+  .orode-div{
+    margin-top: 8px;
+  }
+  .speakers .member .member-info.chukwurah {
+    inset: auto 0 -44px 0;
+  }
+  .speakers .member:hover .member-info.chukwurah {
+    bottom: 0;
+  }
+  .speakers .member .member-info.enyi {
+    inset: auto 0 -44px 0;
+  }
+  .speakers .member:hover .member-info.enyi {
+    bottom: 0;
+  }
+}
+@media (min-width: 1400px){
+  .aima{
+    margin-top: -255px;
+  }
+  .faith{
+    margin-top: -65px;
+  }
+  .adaora{
+    margin-top: -423px;
+  }
+  .jerry{
+    margin-top: -340px;
+  }
+  .orode-div{
+    margin-top: 15px;
+  }
+}
 /*--------------------------------------------------------------
 # Schedule Section
 --------------------------------------------------------------*/
@@ -1220,7 +1342,7 @@ section,
 }
 
 .venue .venue-info {
-  background: url("../img/Asaba_\ Delta\ State_.jpeg") center center no-repeat;
+  background: url("../img/vinmilan2.jpg") center center no-repeat;
   background-size: cover;
   position: relative;
   padding-top: 60px;
@@ -1659,14 +1781,21 @@ section,
   }
 }
 
-@media (max-width: 380px) {
-  #register, #sponsor{
-    font-size: 12px;
+@media (max-width: 430px) {
+  #register{
+    font-size: 13px;
+    padding: 10px 10px !important;
   }
-}
-@media (max-width: 320px) {
-  #register, #sponsor{
-    font-size: 9px;
+  #register:hover{
+    padding: 8px 8px !important;
+  }
+  #sponsor{
+    font-size: 13px;
+    padding: 8px 10px !important;
+  }
+  .grants .grant-btn {
+    font-size: 15px;
+    padding: 10px 14px !important;
   }
 }
 
@@ -1765,7 +1894,6 @@ section,
 /* Grants */
 
 .grants{
-  background-color: #f2f1f1;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
 }
@@ -1782,7 +1910,7 @@ section,
 
 .grants .grant-btn:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 20px rgba(106, 13, 173, 0.7);
+  box-shadow: 0 4px 20px #ff00d09d;
 }
 /*--------------------------------------------------------------
 # Starter Section Section
@@ -1792,14 +1920,23 @@ section,
 /* } */
 
 /* evans styling styling */
-#register, #sponsor {
-  /*background-color: #FF00D2;*/
-  background-color: var(--footer-pink);
-  color: white;
-  transition: .3s;
-  border: 2px solid #fff;
+#register{
+  background-color: white;
+  color: var(--accent-color);
+  padding: 10px 24px;
+  /* border: 1px solid #fff; */
 }
+#sponsor{
+  background-color: var(--accent-color);
+  color: #fff;
+  border:2px solid var(--accent-color);
+  padding: 8px 22px;
+  /* transition: .3s; */
+}
+
 #register:hover, #sponsor:hover{
-  transform: scale(1.05);
-  box-shadow: 0 4px 10px #ff00d06a;
+  border: 2px solid var(--accent-color);
+  padding: 8px 22px;
+  background-color: #fff;
+  color: var(--accent-color);
 }
